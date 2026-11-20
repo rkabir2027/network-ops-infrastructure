@@ -1,0 +1,22 @@
+# Terraform state and downloaded providers
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+plan.json
+*.tfvars
+*.tfvars.json
+
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Python
+__pycache__/
+.venv/
+
+# Editor and operating system
+.vscode/
+.DS_Store

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Operations Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #243447;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #243447;
+            color: white;
+        }
+
+        .online {
+            color: green;
+            font-weight: bold;
+        }
+
+        .offline {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Network Operations Dashboard</h1>
+
+    <h2>Network Devices</h2>
+
+    <table>
+        <tr>
+            <th>Device Name</th>
+            <th>Status</th>
+        </tr>
+
+        {% for device in devices %}
+        <tr>
+            <td>{{ device.name }}</td>
+            <td class="{{ device.status }}">
+                {{ device.status }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
